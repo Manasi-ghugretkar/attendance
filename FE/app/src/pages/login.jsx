@@ -10,7 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import errorToast from "../reuseableComponent/errorToast.jsx";
 import successToast from "../reuseableComponent/successToast.jsx";
 import { Link } from 'react-router-dom';
-import image from "./images/login_img.jpg"
+//import image from "./images/login_img.jpg"
 
 export default function Login(props) {
 
@@ -71,8 +71,7 @@ export default function Login(props) {
 
     return (
         console.log(formik),
-        <div    style={{ 
-            backgroundImage:image}}>
+        <>
 
             <form onSubmit={formik.handleSubmit} >
                 <center>
@@ -128,6 +127,6 @@ export default function Login(props) {
                 </center>
             </form>
             <ToastContainer />
-        </div>
+        </>
     );
 }
