@@ -12,9 +12,9 @@ export default function SimpleContainer(props) {
              margin:30,
              backgroundColor:props.bgcolor,
              borderRadius:10,
-             padding:20,
+             padding:15,
              color:props.color,
-             width:500
+             width:250
          }}>
         <Typography component="div"  >{props.lable}</Typography>
       </Container>

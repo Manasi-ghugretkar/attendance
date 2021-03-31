@@ -10,7 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import errorToast from "../reuseableComponent/errorToast.jsx";
 import successToast from "../reuseableComponent/successToast.jsx";
 import { Link } from 'react-router-dom';
-//import image from "./images/login_img.jpg"
+import './style.css'
 
 export default function Login(props) {
 
@@ -49,6 +49,7 @@ export default function Login(props) {
 
                     if (response.data.status === 1) {
                         localStorage.setItem('IS_LOGGED_IN', 'true')
+                        console.log(localStorage.getItem('IS_LOGGED_IN'));
                     }
                     else {
                         localStorage.setItem('IS_LOGGED_IN', 'false')
@@ -71,14 +72,16 @@ export default function Login(props) {
 
     return (
         console.log(formik),
-        <>
+        <div className="container">
+            <div className="container2">
 
             <form onSubmit={formik.handleSubmit} >
-                <center>
+                <center className="header">
                     <Header
                         lable="Sign in "
-                        bgcolor="red"
+                        bgcolor="#1a237e"
                         color="white"
+                        fontSize="bold"
                     ></Header>
                     <div style={{ margin: 15 }}>
                         <Inputfield
@@ -127,6 +130,7 @@ export default function Login(props) {
                 </center>
             </form>
             <ToastContainer />
-        </>
+            </div>
+        </div>
     );
 }

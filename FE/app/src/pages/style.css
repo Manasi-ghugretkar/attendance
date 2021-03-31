@@ -1,0 +1,28 @@
+
+    .container{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        color:black;
+        padding:20px;
+        background:url('../images/login_img.jpg');
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:cover;
+        width:100%;
+        height: 100vh;    
+    
+    }
+
+    .container2{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        color:black;
+        padding:20px;
+        background-color:#eceff1;
+        background-position:center;
+        box-shadow:10px 10px 10px black;
+        border-radius: 10px;
+        
+    }
