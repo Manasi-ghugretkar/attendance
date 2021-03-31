@@ -71,7 +71,9 @@ export default function Login(props) {
 
     return (
         console.log(formik),
-        <>
+        <div    style={{ 
+            backgroundImage:image}}>
+
             <form onSubmit={formik.handleSubmit} >
                 <center>
                     <Header
@@ -126,6 +128,6 @@ export default function Login(props) {
                 </center>
             </form>
             <ToastContainer />
-        </>
+        </div>
     );
 }
