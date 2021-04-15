@@ -52,6 +52,7 @@ export default function SimpleSelect(props) {
     return (
             <TextField
                 select
+                size="small"
                 label={props.sub}
                 helperText={props.touched && props.error  ? props.error : ""}
                 error={props.touched && props.error ? true : false}

@@ -9,10 +9,12 @@ export default function Submit(props) {
 
       <Button 
       variant="contained" 
-      color="primary" 
-      size="large" 
+      margin="5px"
+      color="primary"
+      size="medium" 
       type={props.type}
       disabled={!props.isDisabled} 
+      style={{margin:6}}
       >
         {props.title}
       </Button>

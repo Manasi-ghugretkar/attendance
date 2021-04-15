@@ -124,7 +124,7 @@ export default function Login(props) {
                         title="submit"
                         isDisabled={formik.dirty && formik.isValid}
                     ></Button>
-                    <Link to="/StudentRegister"><h4>Not Registered? Sign Up Here</h4></Link>
+                    <Link to="/forgotpassword"><h4>Forgot password?or reset the password?</h4></Link>
 
 
                 </center>

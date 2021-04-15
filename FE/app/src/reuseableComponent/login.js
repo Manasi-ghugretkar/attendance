@@ -11,7 +11,7 @@ export default function SimpleContainer(props) {
          style={{ 
              margin:30,
              backgroundColor:props.bgcolor,
-             borderRadius:10,
+             borderRadius:5,
              padding:15,
              color:props.color,
              width:250

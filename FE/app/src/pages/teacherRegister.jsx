@@ -12,6 +12,7 @@ import successToast from "../reuseableComponent/successToast.jsx";
 import { ToastContainer } from 'react-toastify';
 import { makeStyles } from "@material-ui/core/styles";
 import {Link} from 'react-router-dom';
+import './student-style.css';
 
 
 
@@ -78,7 +79,8 @@ function TextFieldSizes() {
 
   return (
     console.log(formik),
-    <div>
+    <div className="container1">
+      <div className="container2">
 
       <form onSubmit={formik.handleSubmit} >
         <div>
@@ -90,7 +92,7 @@ function TextFieldSizes() {
               }}>
 
               <div>
-                <Login bgcolor="#e040fb" color="black" lable="Teacher Register form"/>
+                <Login bgcolor="black" color="white" lable="Teacher Register form"/>
               </div>
 
               <div className={classes.root}>
@@ -172,6 +174,7 @@ function TextFieldSizes() {
         </div>
       </form>
       <ToastContainer />
+    </div>
     </div>
 
   );

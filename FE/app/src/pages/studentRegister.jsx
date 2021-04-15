@@ -11,7 +11,9 @@ import errorToast from "../reuseableComponent/errorToast.jsx";
 import successToast from "../reuseableComponent/successToast.jsx";
 import { ToastContainer } from 'react-toastify';
 import { makeStyles } from "@material-ui/core/styles";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './student-style.css';
+
 
 
 
@@ -90,134 +92,136 @@ function TextFieldSizes() {
 
   return (
     console.log(formik),
-    <div>
+    <div className="container1">
+      <div className="container2">
 
-      <form onSubmit={formik.handleSubmit} >
-        <div>
-          <center>
-            <div
-              style={{
-                padding: 10,
-                borderRadius: 10
-              }}>
+        <form onSubmit={formik.handleSubmit} >
+          <div>
+            <center>
+              <div
+                style={{
+                  padding: 10,
+                  borderRadius: 10
+                }}>
 
-              <div>
-                <Login bgcolor="#ff80ab" color="black" lable="Student register form"/>
-              </div>
+                <div>
+                  <Login bgcolor="purple" color="white" lable="Student register form" />
+                </div>
 
-              <div className={classes.root}>
-                <div>
-                  <TextFields
-                    lable="user name"
-                    name="name"
-                    value={formik.values.name}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.name}
-                    touched={formik.touched.name}
-                  />
-                  <TextFields
-                    lable="email id"
-                    name="email"
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.email}
-                    touched={formik.touched.email}
-                  />
-                </div>
-                <div>
-                  <TextFields
-                    lable="usn"
-                    name="usn"
-                    value={formik.values.usn}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.usn}
-                    touched={formik.touched.usn}
-                  />
-                  <TextFields
-                    lable="phone no"
-                    name="phoneno"
-                    value={formik.values.phoneno}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.phoneno}
-                    touched={formik.touched.phoneno}
-                  />
-                </div>
-                <div>
-                  <Select
-                    sub="batchYear"
-                    data={batchYear}
-                    name="batchYear"
-                    value={formik.values.batchYear}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.batchYear}
-                    touched={formik.touched.batchYear}
-                  />
-                  <Select
-                    sub="branch"
-                    data={branch}
-                    name="branch"
-                    value={formik.values.branch}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.branch}
-                    touched={formik.touched.branch}
-                  />
-                </div>
-                <div>
-                  <Select
-                    sub="Sem"
-                    data={sem}
-                    name="sem"
-                    value={formik.values.sem}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.sem}
-                    touched={formik.touched.sem}
-                  />
-                  <Select
-                    sub="division"
-                    data={division}
-                    name="division"
-                    value={formik.values.division}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.division}
-                    touched={formik.touched.division}
-                  />
-                </div>
-                <div>
-                  <TextFields
-                    lable="password"
-                    name="password"
-                    value={formik.values.password}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    error={formik.errors.password}
-                    touched={formik.touched.password}
-                  />
-                </div>
-                {/* <BasicTextFields 
+                <div className={classes.root}>
+                  <div>
+                    <TextFields
+                      lable="user name"
+                      name="name"
+                      value={formik.values.name}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.name}
+                      touched={formik.touched.name}
+                    />
+                    <TextFields
+                      lable="email id"
+                      name="email"
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.email}
+                      touched={formik.touched.email}
+                    />
+                  </div>
+                  <div>
+                    <TextFields
+                      lable="usn"
+                      name="usn"
+                      value={formik.values.usn}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.usn}
+                      touched={formik.touched.usn}
+                    />
+                    <TextFields
+                      lable="phone no"
+                      name="phoneno"
+                      value={formik.values.phoneno}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.phoneno}
+                      touched={formik.touched.phoneno}
+                    />
+                  </div>
+                  <div>
+                    <Select
+                      sub="batchYear"
+                      data={batchYear}
+                      name="batchYear"
+                      value={formik.values.batchYear}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.batchYear}
+                      touched={formik.touched.batchYear}
+                    />
+                    <Select
+                      sub="branch"
+                      data={branch}
+                      name="branch"
+                      value={formik.values.branch}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.branch}
+                      touched={formik.touched.branch}
+                    />
+                  </div>
+                  <div>
+                    <Select
+                      sub="Sem"
+                      data={sem}
+                      name="sem"
+                      value={formik.values.sem}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.sem}
+                      touched={formik.touched.sem}
+                    />
+                    <Select
+                      sub="division"
+                      data={division}
+                      name="division"
+                      value={formik.values.division}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.division}
+                      touched={formik.touched.division}
+                    />
+                  </div>
+                  <div>
+                    <TextFields
+                      lable="password"
+                      name="password"
+                      value={formik.values.password}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      error={formik.errors.password}
+                      touched={formik.touched.password}
+                    />
+                  </div>
+                  {/* <BasicTextFields 
           lable="confirmPassword" 
           name="confirmPassword" 
           value={formik.values.confirmPassword} 
           onChange={formik.handleChange} 
           /><br></br> */}
-              </div>
-              <Submit
-                type="submit"
-                title="submit"
-                isDisabled={formik.dirty && formik.isValid} />
+                </div>
+                <Submit
+                  type="submit"
+                  title="submit"
+                  isDisabled={formik.dirty && formik.isValid} />
                 <Link to="/Login"><h4>go back to signin</h4></Link>
-             </div>
-          </center>
-        </div>
-      </form>
-      <ToastContainer />
+              </div>
+            </center>
+          </div>
+        </form>
+        <ToastContainer />
+      </div>
     </div>
 
   );

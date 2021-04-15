@@ -8,7 +8,7 @@ try:
       host="localhost",
       user="root",
       password="",
-      database="attendence_mgt"
+      database="attendance_mgt"
 )
 
     curs=conn.cursor(buffered=True)
@@ -28,16 +28,15 @@ try:
        name=data['name']
        usn=data['usn']
        sem=data['sem']
-       division=data['division']
-       branch=data['branch']
-       phoneno=data['phoneno']
+       branch_id=data['branch_id']
+       div_code=data['div_code']
+       mobile=data['mobile']
        email=data['email']
-       password=data['password']
-       bachYear=data['batchYear']
+       mentor_id=data['mentor_id']
     
 
-       sqlQuery="insert into student(name,usn,sem,division,branch,phoneno,email,password,bachYear)values(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-       values=(name,usn,sem,division,branch,phoneno,email,password,bachYear)
+       sqlQuery="insert into student(name,usn,sem,branch_id,div_code,mobile,email,mentor_id)values(%s,%s,%s,%d,%s,%s,%s,%s,%d)"
+       values=(name,usn,sem,branch_id,div_code,mobile,email,mentor_id)
        curs.execute(sqlQuery,values)
 
        conn.commit()
@@ -74,37 +73,16 @@ try:
         password=request.get_json()['password']
         userType=request.get_json()['userType']
         #print(user,password,userType)
-        if userType=='admin':
-            sqlQuery="select * from admin where name =%s and password=%s"
-            values=(user,password)
-            curs.execute(sqlQuery,values)
-            if(curs.rowcount>0):
-                return jsonify(({"message":"valid user", "status":1}))
-            else:
-                return jsonify(({"message":"Invalid user or password","status":0}))
-        elif userType=="student":
-            sqlQuery="select * from student where name=%s and password=%s"
-            values=(user,password)
-            curs.execute(sqlQuery,values) 
-            if (curs.rowcount>0):
-                return jsonify(({"message":"valid user","status":1}))
-            else:
-                return jsonify(({"message":"Invalid user or password","status":0}))
+       
+        sqlQuery="select * from users where faculty_name=%s and password=%s"
+        values=(user,password)
+        curs.execute(sqlQuery,values)
+        if(curs.rowcount>0):
+            return jsonify(({"message":"valid user", "status":1}))
         else:
-            sqlQuery="select * from teacher where name =%s and password=%s"
-            values=(user,password)
-            curs.execute(sqlQuery,values)
-            if (curs.rowcount>0):
-                return jsonify(({"message":"valid user","status":1}))
-            else:
-                return jsonify(({"message":"Invalid user or password","status":0}))
-
-
-
-
-        return jsonify({"message":"sucess"})
-
-
+            return jsonify(({"message":"Invalid user or password","status":0}))
+        
+    
 
     
     
