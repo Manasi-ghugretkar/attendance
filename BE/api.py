@@ -81,6 +81,26 @@ try:
             return jsonify(({"message":"valid user", "status":1}))
         else:
             return jsonify(({"message":"Invalid user or password","status":0}))
+
+
+
+    @app.route('./forgotpassword',methods=['post'])  
+    def forgotpassword():
+        data=request.get_json()
+        print(data)
+        username=request.get_json()['name']
+        password=request.get_json()['password']
+        userType=request.get_json()['userType']     
+
+    @app.route('./otp',methods=['post'])  
+    def otp():
+        data=request.get_json()
+        print(data)
+        otp=request.get_json()['name']
+        value=True
+       
+
+
         
     
 
