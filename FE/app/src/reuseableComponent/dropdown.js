@@ -61,7 +61,7 @@ export default function SimpleSelect(props) {
                 value={props.values}
                 name={props.name}
                 onBlur={props.onBlur}
-                style={{width:props.width}}
+                style={{width:props.width,margin:14}}
 
             >
                {

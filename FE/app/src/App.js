@@ -7,6 +7,9 @@ import Container from "./pages/container.jsx";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Otp from './pages/otp.jsx';
 import Home from './pages/Home.jsx';
+import Newpassword from './pages/newPassword.jsx';
+import Teacher_Dashboard from './pages/Teacher_Dashboard' 
+
 
 
 export default function App(props) {
@@ -23,6 +26,10 @@ export default function App(props) {
           <Route exact path="/forgotpassword" component={Container}/>
           <Route exact path="/otp" component={Otp}/>
           <Route exact path="/" component={Home}/>
+          <Route exact path="/newPassword" component={Newpassword}/>
+          <Route exact path="/TeacherDashboard" component={Teacher_Dashboard}/>
+
+
           
         </Switch>
       </Router>

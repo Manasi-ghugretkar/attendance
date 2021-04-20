@@ -98,6 +98,23 @@ try:
         print(data)
         otp=request.get_json()['name']
         value=True
+
+
+    @app.route('./newPassword',methods=['post'])
+    def new_password():
+        data=request.get_json()
+        print(data)
+        newpass=request.get_json()['new password']
+        confirmpass=request.get_json()['confirm password']
+        value=True
+
+    @app.route('./TeacherDashboard',method=['post'])
+    def TeacherDashboard():
+        data=request.get_json()
+        print(data)
+
+    
+
        
 
 

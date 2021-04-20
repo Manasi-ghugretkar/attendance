@@ -6,7 +6,7 @@ export default function TextFields(props) {
   return (
    
     <TextField id="outlined-basic" variant="outlined" size="small" margin="dense" 
-      style={{ borderWidth: 5,height:38, fontSize:10}}
+      style={{ borderWidth: 5,height:38, fontSize:10,margin:14}}
       padding="1"
       name={props.name}
       values={props.value}

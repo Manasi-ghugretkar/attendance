@@ -14,7 +14,7 @@ export default function Submit(props) {
       size="medium" 
       type={props.type}
       disabled={!props.isDisabled} 
-      style={{margin:10}}
+      style={{margin:14}}
       >
         {props.title}
       </Button>

@@ -83,7 +83,7 @@ export default function Login(props) {
                         color="white"
                         fontSize="bold"
                     ></Header>
-                    <div style={{ margin: 15 }}>
+                    <div >
                         <Inputfield
                             lable="user name"
                             name="name"
@@ -95,7 +95,7 @@ export default function Login(props) {
 
                         ></Inputfield>
                     </div>
-                    <div style={{ margin: 15 }}>
+                    <div >
                         <Inputfield
                             lable="password"
                             name="password"
@@ -106,7 +106,7 @@ export default function Login(props) {
                             touched={formik.touched.password}
                         ></Inputfield>
                     </div>
-                    <div style={{ margin: 15 }}>
+                    <div >
                         <Dropdown
                             data={userType}
                             sub="User Type"

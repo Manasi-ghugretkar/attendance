@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Input from '../reuseableComponent/inputfield';
 //import Button from './forgot_button.jsx';
 import Button from "../reuseableComponent/button.js";
@@ -55,9 +55,6 @@ export default function Forgotpass(props) {
     )
 
     
-    
-    
-    
     return (
 
         
@@ -78,7 +75,6 @@ export default function Forgotpass(props) {
                         type="submit"
                         title="submit"
                         isDisabled={formik.dirty }
-                       
                     />
                      
                 </div>
