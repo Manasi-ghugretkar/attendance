@@ -52,43 +52,45 @@ export default function Newpassword(props) {
         <>
             <div className="up-container">
                 <div className="newpass_container">
-                    
-                        <form onSubmit={formik.handleSubmit} >
-                            <div className="bottom_newpass_container">
-                            <h2 style={{ fontFamily: "cursive", fontSize: 30 }}>Enter your New password!</h2>
-                            <div className="new_small_container"></div>
-                             <center>
-                            <Inputfield
-                                lable="Enter New Password"
-                                name="newPassword"
-                                value={formik.values.newPassword}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                error={formik.errors.newPassword}
-                                touched={formik.touched.newPassword}
-                            >
-                            </Inputfield>
-                            <Inputfield
-                                lable="Confirm Password"
-                                name="confirmPassword"
-                                value={formik.values.confirmPassword}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                error={formik.errors.confirmPassword}
-                                touched={formik.touched.confirmPassword}
-                            ></Inputfield>
-                            <Button
-                                type="submit"
-                                title="submit"
-                                isDisabled={formik.dirty && formik.isValid} >
-                            </Button>
+
+                    <form onSubmit={formik.handleSubmit} >
+                        <div className="bottom_newpass_container">
+                            <center>
+                                <h2 style={{ fontFamily: "cursive", fontSize: 30 }}>Enter your New password!</h2>
                             </center>
-                            </div>
+                            <div className="new_small_container"></div>
+                            <center>
+                                <Inputfield
+                                    lable="Enter New Password"
+                                    name="newPassword"
+                                    value={formik.values.newPassword}
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    error={formik.errors.newPassword}
+                                    touched={formik.touched.newPassword}
+                                >
+                                </Inputfield>
+                                <Inputfield
+                                    lable="Confirm Password"
+                                    name="confirmPassword"
+                                    value={formik.values.confirmPassword}
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    error={formik.errors.confirmPassword}
+                                    touched={formik.touched.confirmPassword}
+                                ></Inputfield>
+                                <Button
+                                    type="submit"
+                                    title="submit"
+                                    isDisabled={formik.dirty && formik.isValid} >
+                                </Button>
+                            </center>
+                        </div>
                     </form>
-                    
-                <ToastContainer />
+
+                    <ToastContainer />
+                </div>
             </div>
-        </div>
 
         </>
     )

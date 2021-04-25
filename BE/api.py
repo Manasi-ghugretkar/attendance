@@ -113,6 +113,28 @@ try:
         data=request.get_json()
         print(data)
 
+    @app.route('./HOD_Dashboard',method=['post'])
+    def HOD_Dashboard():
+        data=request.get_json()
+        print(data)
+
+    @app.route('./Principal_HomeDash',method=['post'])
+    def Principal_HomeDash():
+        data = request.get_json()
+        print(data)
+    
+    @app.route('./Principal_facultyDash',method=['post'])
+    def Principal_facultyDash():
+        data = request.get_json()
+        print(data)
+    
+    @app.route('./Principal_hodDash',method=['post'])
+    def Principal_hodDash():
+        data = request.get_json()
+        print(data)
+
+    
+
     
 
        
